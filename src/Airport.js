@@ -5,3 +5,7 @@ function Airport(hangar = [], capacity = defaultCapacity, weatherChecker = new W
   this.capacity = capacity;
   this.weatherChecker = weatherChecker;
 };
+
+Airport.prototype.land = function (plane) {
+  this.hangar.push(plane);
+};

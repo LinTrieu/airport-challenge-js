@@ -36,4 +36,8 @@ describe('Airport', function() {
     expect(airport2.weatherChecker).toEqual("im a weather checker");
   });
 
+  it('can land a plane in the hangar', function() {
+    airport.land('plane')
+      expect(airport.hangar.indexOf('plane')).toBeGreaterThan(-1);
+  });
 });
