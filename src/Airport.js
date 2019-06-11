@@ -1,1 +1,3 @@
-function Airport() {};
+function Airport(hangar = []) {
+  this.hangar = hangar;
+};
