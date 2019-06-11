@@ -22,4 +22,18 @@ describe('Airport', function() {
     expect(airport.capacity).toEqual(20);
   });
 
+  it('has a capacity injected', function(){
+    airport2 = new Airport([], 50)
+    expect(airport2.capacity).toEqual(50);
+  });
+
+  it('has a default weather checker', function(){
+    expect(airport.weatherChecker).toEqual(jasmine.any(Weather));
+  });
+
+  it('can have weather checker injected', function() {
+    airport2 = new Airport([],20, "im a weather checker")
+    expect(airport2.weatherChecker).toEqual("im a weather checker");
+  });
+
 });
