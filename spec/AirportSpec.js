@@ -17,4 +17,9 @@ describe('Airport', function() {
     airport2 = new Airport(['im a plane'])
     expect(airport2.hangar).toEqual(['im a plane']);
   });
+
+  it('has a default capacity', function(){
+    expect(airport.capacity).toEqual(20);
+  });
+
 });
