@@ -1,8 +1,8 @@
 describe("Weather", function() {
   var weather;
 
-  beforeEach(function() { 
-    weather = new Weather();  
+  beforeEach(function() {
+    weather = new Weather();
   });
 
   it("weather exists", function() {
@@ -17,4 +17,7 @@ describe("Weather", function() {
     expect(weather.isStormy).toEqual(jasmine.any(Function));
   });
 
+  it("isStormy should be a function", function() {
+    expect(weather.isStormy).toMatch(/true|false/);
+  });
 });
